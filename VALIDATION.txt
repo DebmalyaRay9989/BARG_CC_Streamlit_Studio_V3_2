@@ -1,0 +1,45 @@
+test_all_missing (test_engine.EngineTests.test_all_missing) ... ok
+test_digits_live (test_engine.EngineTests.test_digits_live) ... ok
+test_document_pipeline (test_engine.EngineTests.test_document_pipeline) ... ok
+test_empty_affected_coverage (test_engine.EngineTests.test_empty_affected_coverage) ... ok
+test_exact_view_loss (test_engine.EngineTests.test_exact_view_loss) ... ok
+test_fixed_mask_compositional (test_engine.EngineTests.test_fixed_mask_compositional) ... ok
+test_gate_floor_and_absence (test_engine.EngineTests.test_gate_floor_and_absence) ... ok
+test_global (test_engine.EngineTests.test_global) ... ok
+test_mixed_document_archive (test_engine.EngineTests.test_mixed_document_archive) ... ok
+test_refit (test_engine.EngineTests.test_refit) ... ok
+test_rotation (test_engine.EngineTests.test_rotation) ... ok
+test_source_manifest (test_engine.EngineTests.test_source_manifest) ... ok
+test_sqrt_block (test_engine.EngineTests.test_sqrt_block) ... ok
+test_unassignable_and_duplicate (test_engine.EngineTests.test_unassignable_and_duplicate) ... ok
+test_integrity_success_and_failure (test_magic_rendering.MagicRenderingTests.test_integrity_success_and_failure) ... ok
+test_keywords_empty_or_missing (test_magic_rendering.MagicRenderingTests.test_keywords_empty_or_missing) ... ok
+test_keywords_present_real_clustering (test_magic_rendering.MagicRenderingTests.test_keywords_present_real_clustering) ... ok
+test_magic_disabled (test_magic_rendering.MagicRenderingTests.test_magic_disabled) ... ok
+test_no_bare_conditional_rendering (test_magic_rendering.MagicRenderingTests.test_no_bare_conditional_rendering) ... ok
+test_all_explicit_widths_valid (test_modern_width.ModernWidthTests.test_all_explicit_widths_valid) ... ok
+test_chart_helper_modern_width_and_config (test_modern_width.ModernWidthTests.test_chart_helper_modern_width_and_config) ... ok
+test_dependency_version_floor (test_modern_width.ModernWidthTests.test_dependency_version_floor) ... ok
+test_keyword_tables_stretch (test_modern_width.ModernWidthTests.test_keyword_tables_stretch) ... ok
+test_no_legacy_width_keywords_in_application (test_modern_width.ModernWidthTests.test_no_legacy_width_keywords_in_application) ... ok
+test_cdist_parity (test_optimized.OptimizedTests.test_cdist_parity) ... ok
+test_exact_silhouette (test_optimized.OptimizedTests.test_exact_silhouette) ... ok
+test_identical_branch_fits_once (test_optimized.OptimizedTests.test_identical_branch_fits_once) ... ok
+test_no_ocr (test_optimized.OptimizedTests.test_no_ocr) ... ok
+test_prepared_cache (test_optimized.OptimizedTests.test_prepared_cache) ... ok
+test_quick_certificate (test_optimized.OptimizedTests.test_quick_certificate) ... ok
+test_quick_large_sample (test_optimized.OptimizedTests.test_quick_large_sample) ... ok
+test_chart_name_not_shadowed (test_studio_theme.StudioTests.test_chart_name_not_shadowed) ... ok
+test_loss_curve (test_studio_theme.StudioTests.test_loss_curve) ... ok
+test_outcome_colors (test_studio_theme.StudioTests.test_outcome_colors) ... ok
+test_palettes_and_charts (test_studio_theme.StudioTests.test_palettes_and_charts) ... ok
+test_workflow (test_studio_theme.StudioTests.test_workflow) ... ok
+test_document_inspector_with_real_clustering_result (test_ui_compat.UICompatibilityTests.test_document_inspector_with_real_clustering_result) ... ok
+test_no_multi_argument_container_write (test_ui_compat.UICompatibilityTests.test_no_multi_argument_container_write) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 2.514s
+
+OK
+
+V3.2 maintenance: 38 offline tests passed, including five modern-width regression tests. All 21 legacy keyword calls migrated (12 dataframe calls, seven chart helper call sites, one shared Plotly renderer, one image). Source compilation passed; scientific engine, document pipeline, certificates, reference archive, theme code and configuration byte-identical to V3.1. The previous 33 regression tests continue to pass. Real Streamlit AppTest and browser/Windows execution not verified: installing Streamlit >=1.51,<2 in the build runtime returned no matching distribution. Run test_application.bat in your installed environment; smoke_ui.py checks all workspaces and captures legacy width warnings from registered loggers. No warning suppression is used. Requirements floor 1.51 was selected using documented APIs (dataframe, image, Plotly).
