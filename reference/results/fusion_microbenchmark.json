@@ -1,0 +1,58 @@
+{
+  "scope": "fusion only: reliability scores precomputed; excludes inference, training, PCA, clustering; CPU single process",
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "sklearn": "1.8.0"
+  },
+  "records": [
+    {
+      "n": 512,
+      "method": "masked_concat",
+      "median_ms": 0.15178399999999997,
+      "iqr_ms": 0.020276500000000003,
+      "fused_size_mb": 0.140625,
+      "repeats": 40
+    },
+    {
+      "n": 512,
+      "method": "gate_plus_concat",
+      "median_ms": 0.2526705,
+      "iqr_ms": 0.08764674999999997,
+      "fused_size_mb": 0.140625,
+      "repeats": 40
+    },
+    {
+      "n": 4096,
+      "method": "masked_concat",
+      "median_ms": 0.9947134999999999,
+      "iqr_ms": 0.15484825000000013,
+      "fused_size_mb": 1.125,
+      "repeats": 40
+    },
+    {
+      "n": 4096,
+      "method": "gate_plus_concat",
+      "median_ms": 1.5310005,
+      "iqr_ms": 0.25559774999999996,
+      "fused_size_mb": 1.125,
+      "repeats": 40
+    },
+    {
+      "n": 16384,
+      "method": "masked_concat",
+      "median_ms": 4.435124999999999,
+      "iqr_ms": 0.6074382499999995,
+      "fused_size_mb": 4.5,
+      "repeats": 40
+    },
+    {
+      "n": 16384,
+      "method": "gate_plus_concat",
+      "median_ms": 6.063782,
+      "iqr_ms": 0.58379125,
+      "fused_size_mb": 4.5,
+      "repeats": 40
+    }
+  ]
+}
