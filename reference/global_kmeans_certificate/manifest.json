@@ -1,0 +1,13 @@
+{
+  "code_sha256": "2cf157ef3cdff9c4f46b243b629f6ed759d5727e70ac587d907c9239056b63fb",
+  "experiment": "small-n global kmeans reoptimization certificate",
+  "source": "synthetic normalized 3-view data; NO natural-view or semantic benchmark",
+  "n_trials": 210,
+  "global_partitions": 127,
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5"
+  },
+  "certificate_checks": "exact objectives for all unlabeled K-partitions plus exact perturbation bound",
+  "statistical_limitation": "seed repetitions from the same specified generative simulation, not independent domain inference"
+}
