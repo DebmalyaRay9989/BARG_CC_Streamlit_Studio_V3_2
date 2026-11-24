@@ -1,0 +1,43 @@
+{
+  "protocol": "new diagnostic / NOT natural multi-view / NOT confirmatory model result",
+  "datasets": [
+    "iris",
+    "wine",
+    "breast_cancer"
+  ],
+  "split_seeds": [
+    11,
+    17,
+    23,
+    31,
+    47
+  ],
+  "train_corruptions": [
+    "gaussian",
+    "salt",
+    "scale",
+    "drop"
+  ],
+  "heldout_test_corruptions": [
+    "shift",
+    "swap"
+  ],
+  "labels_used_for": [
+    "stratified splitting",
+    "final ARI only"
+  ],
+  "gate_strength": 0.7520386983881371,
+  "gate_floor": 0.1,
+  "cluster_seeds": 4,
+  "software": {
+    "python": "3.13.5",
+    "sklearn": "1.8.0",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "iris_data_sha256": "aa06b8008ceba42efc654be0f83fdafc786239c9e8f13146044d078f5aab8f23",
+  "wine_data_sha256": "3a28849ef2366c4b9d4e382b3fa5624a66f693c04d7fdcf43c529bbb0bb338d7",
+  "breast_cancer_data_sha256": "25e2eb7b7a8745b1bde5ba18bc4969983d2e2f403291ecd5bde4a29ef30c3859",
+  "n_rows": 720,
+  "inferential_caveat": "Split overlaps within each dataset; sign-flip values are conditional diagnostics only; 3 public datasets are distinct sources but artificially split into views."
+}
