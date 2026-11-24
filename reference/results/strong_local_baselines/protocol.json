@@ -1,0 +1,36 @@
+{
+  "datasets": [
+    "digits",
+    "wine",
+    "breast_cancer"
+  ],
+  "seeds": [
+    47,
+    59,
+    71,
+    83,
+    97
+  ],
+  "conditions": [
+    "M20_clean",
+    "M20_D50"
+  ],
+  "methods": [
+    "masked",
+    "pca8",
+    "pca16",
+    "pca32",
+    "rff256_low",
+    "rff256_high"
+  ],
+  "primary_endpoint": "ARI",
+  "baseline": "masked",
+  "selection": "M20_D50 validation silhouette, +0.02 threshold vs mask, no labels",
+  "scope": "Exploratory after previous results; derived views; no official-code comparators",
+  "fit": "train-only preprocessing, quality fitting, RFF/PCA, KMeans centroids",
+  "not_confirmatory": true,
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.3.5"
+  }
+}

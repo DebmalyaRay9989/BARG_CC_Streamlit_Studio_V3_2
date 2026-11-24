@@ -1,0 +1,30 @@
+{
+  "status": "EXECUTED_LIBRARY_COMPARATORS_NOT_OFFICIAL_IMVC_CODE",
+  "code_sha256": "e17758009a7261dbff726dc9ff9a0e857044e6d7924598b5f84b8e0d881f5371",
+  "n_new_method_scores": 100,
+  "original_masked_reference_exactly_replayed": true,
+  "original_reference_rows": 20,
+  "datasets": [
+    "anes96",
+    "modechoice"
+  ],
+  "seeds": [
+    211,
+    223,
+    227,
+    229,
+    233
+  ],
+  "algorithms": {
+    "GaussianMixture": "scikit-learn implementation of mixture model EM, diagonal regularized covariance",
+    "Birch": "scikit-learn implementation of BIRCH clustering",
+    "KMeans": "scikit-learn KMeans exact replay audit"
+  },
+  "protocol_status": "post hoc exploratory; matched split/corruption hashes and label-use rules",
+  "not_done": "No official source-code execution of ToRES, HSACC, DIMVC-HIA, or new native-modal benchmark",
+  "versions": {
+    "python": "3.13.5",
+    "scikit_learn": "1.8.0",
+    "numpy": "2.3.5"
+  }
+}

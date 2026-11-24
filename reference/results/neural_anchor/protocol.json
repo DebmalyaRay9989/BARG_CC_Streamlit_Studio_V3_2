@@ -1,0 +1,47 @@
+{
+  "study": "Exploratory identity-anchored readout of a trained BARG-CC neural reference",
+  "status": "Executed, post-hoc, pseudo-view data; NOT independent confirmation",
+  "data_sources": [
+    "digits",
+    "wine",
+    "breast_cancer"
+  ],
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "conditions": [
+    "M20_clean",
+    "M20_D50"
+  ],
+  "eta_grid": [
+    0,
+    0.1,
+    0.25,
+    0.5,
+    1
+  ],
+  "neural_training": "Original 45-epoch benchmark_neural_probe.py per-view neural models; frozen reliability estimators",
+  "matched_modes": [
+    "neural_gate",
+    "neural_uniform"
+  ],
+  "formula": "z_eta=[sqrt(1-eta)*normalized_masked_raw; sqrt(eta)*normalized_neural_fused]",
+  "scaling_and_kmeans": "Fit using training observations only; held-out test records assigned without centroid refitting.",
+  "labels": "Not used for neural optimization, estimator training, anchor selection or clustering fit; final ARI/NMI scoring only.",
+  "select_eta_on_test": false,
+  "eta_selection_note": "Whole grid explored after original test evidence; eta=.25 highlighted descriptively, not chosen on independent validation.",
+  "source_type": "Derived/partitioned views of built-in public scikit-learn datasets; no naturally independent modalities",
+  "records": 180,
+  "unique_method_seed_condition": 162,
+  "baseline_duplicates": 18,
+  "raw_sha256": "5d5b36c84817eaaf812f4ae7ab597ec03f87f7f8b1599408f013260eaa11d569",
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "sklearn": "1.8.0",
+    "torch": "2.10.0+cpu"
+  },
+  "execution_caveat": "Overlapping 70/30 resplits by seed and only three source datasets prevent independent dataset inference."
+}

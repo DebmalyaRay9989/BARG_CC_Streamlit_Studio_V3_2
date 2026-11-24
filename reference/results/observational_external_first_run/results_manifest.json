@@ -1,0 +1,67 @@
+{
+  "provenance": {
+    "anes96": {
+      "source": "American National Election Studies 1996 (statsmodels public-domain copy)",
+      "view_groups": [
+        "demographics and media exposure",
+        "political attitude responses"
+      ],
+      "limitations": "Two questionnaire domains; same survey instrument, NOT independent sensor/modalities."
+    },
+    "modechoice": {
+      "source": "Australian 1987 intercity travel mode-choice survey/network measurements (statsmodels public-domain copy)",
+      "view_groups": [
+        "travel time and terminal wait",
+        "route monetary costs",
+        "household income"
+      ],
+      "limitations": "Naturally collected heterogeneous survey/network variables; NOT canonical multimodal image/text dataset."
+    }
+  },
+  "source_status": "local public-domain bundled observational datasets",
+  "independent_acquisition": "not proven; ANES questionnaire domains; Modechoice survey and network variables",
+  "primary_contrast": "M20_D50 neural_denoised_gated minus masked",
+  "external_study_is_exploratory": true,
+  "locked_protocol": {
+    "freeze_timestamp_utc": "2026-11-10; recorded before inspecting any new test metric",
+    "datasets": [
+      "anes96",
+      "modechoice"
+    ],
+    "source": "statsmodels locally installed public-domain datasets",
+    "modalities_status": "naturally recorded heterogeneous measurement groups, not independently acquired image/text/sensor modalities",
+    "seeds": [
+      211,
+      223,
+      227,
+      229,
+      233
+    ],
+    "conditions": [
+      "M20_clean",
+      "M20_D50"
+    ],
+    "methods": [
+      "masked",
+      "pca16",
+      "neural_denoised_masked",
+      "neural_denoised_gated",
+      "neural_denoised_fixed_prior",
+      "neural_denoised_shuffled",
+      "neural_denoised_anchor025"
+    ],
+    "primary_endpoint": "ARI; M20_D50 neural_denoised_gated vs masked",
+    "other_diagnostics": "mean paired ARI vs PCA16, denoising contribution, gated vs shuffled, NMI, runtime",
+    "denoise_epochs": 50,
+    "denoise_blend": 0.5,
+    "anchoring_eta": 0.25,
+    "kappa": 0.7520386983881371,
+    "train_val_test": "stratified 60/20/20 for each seed; train scalers and clusters on training only",
+    "corruption": "matched train Gaussian/dropout; test coordinate permutation and additive offset pulses held out from fit",
+    "missingness": "independent view drop p=.2, resample all-missing; identical draws across methods",
+    "parameters": "fixed by previous implementation; no test-label tuning or refitting"
+  },
+  "n_independent_datasets": 2,
+  "not_official_code_comparison": true,
+  "scientific_limitations": "Different observational domains, no independent sensor modalities; overlapping reseeded folds are NOT independent datasets."
+}

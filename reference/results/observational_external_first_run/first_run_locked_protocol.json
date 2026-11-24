@@ -1,0 +1,39 @@
+{
+  "freeze_timestamp_utc": "2026-11-10; recorded before inspecting any new test metric",
+  "datasets": [
+    "anes96",
+    "modechoice"
+  ],
+  "source": "statsmodels locally installed public-domain datasets",
+  "modalities_status": "naturally recorded heterogeneous measurement groups, not independently acquired image/text/sensor modalities",
+  "seeds": [
+    211,
+    223,
+    227,
+    229,
+    233
+  ],
+  "conditions": [
+    "M20_clean",
+    "M20_D50"
+  ],
+  "methods": [
+    "masked",
+    "pca16",
+    "neural_denoised_masked",
+    "neural_denoised_gated",
+    "neural_denoised_fixed_prior",
+    "neural_denoised_shuffled",
+    "neural_denoised_anchor025"
+  ],
+  "primary_endpoint": "ARI; M20_D50 neural_denoised_gated vs masked",
+  "other_diagnostics": "mean paired ARI vs PCA16, denoising contribution, gated vs shuffled, NMI, runtime",
+  "denoise_epochs": 50,
+  "denoise_blend": 0.5,
+  "anchoring_eta": 0.25,
+  "kappa": 0.7520386983881371,
+  "train_val_test": "stratified 60/20/20 for each seed; train scalers and clusters on training only",
+  "corruption": "matched train Gaussian/dropout; test coordinate permutation and additive offset pulses held out from fit",
+  "missingness": "independent view drop p=.2, resample all-missing; identical draws across methods",
+  "parameters": "fixed by previous implementation; no test-label tuning or refitting"
+}

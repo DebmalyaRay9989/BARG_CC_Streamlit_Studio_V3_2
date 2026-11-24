@@ -1,0 +1,39 @@
+{
+  "experiment": "NEW standalone controlled pseudo-view digit mechanism test; NOT original result replication",
+  "data": "sklearn load_digits; 1797 image records; 8x8 grayscale; labels used for final ARI/NMI only",
+  "data_sha256": "5889d26819cf830d070975af3c711419825fa0a078137b3d80b8e7d06bd58da0",
+  "pca": "12 components per view, full SVD, fit clean train only",
+  "corruption_training": [
+    "gaussian",
+    "saltpepper",
+    "blur",
+    "illumination"
+  ],
+  "corruption_evaluation": [
+    "rotation",
+    "crop",
+    "bleed"
+  ],
+  "kappa": 0.7520386983881371,
+  "rho": 0.1,
+  "splits": 5,
+  "cluster_seeds": 4,
+  "conditions": [
+    "M20+D50",
+    "M40+D50",
+    "M20+clean"
+  ],
+  "inferential_unit": "no independent datasets: overlapping repeated train/test splits, descriptive only",
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "sklearn": "1.8.0",
+  "pandas": "2.2.3",
+  "scipy": "1.17.0",
+  "test_id_hashes": {
+    "0": "5881c2e71c02fc11a56c5044262f7d2e9e99362099ee9de2cd5b6b7f1bbd1257",
+    "1": "24952c56b087c4c77ad3f10175f1c0ad2a75327aa41a1b6773fad83f0030e730",
+    "2": "2306da56df801696f001cb4d519f408fac7bb2da5cf436529f5ed1763a9f892c",
+    "3": "5958129c11abe4f8f8128d7e8526afb843edce657845932dc384c83c29803352",
+    "4": "a725347333b04212292b2ea4949545b9a22d96149460bec6ccf69bc2dfa7d978"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "protocol_version": "neural-probe-v1-frozen-2026-11-08",
+  "status": "new exploratory neural reference implementation, not checkpoint replay",
+  "sources": "sklearn built-in digits, wine, breast cancer; pseudo-views, NOT independent sensors",
+  "datasets": [
+    "digits",
+    "wine",
+    "breast_cancer"
+  ],
+  "seeds": [
+    11,
+    23,
+    37
+  ],
+  "epochs": 45,
+  "batch": 128,
+  "lr": 0.001,
+  "gate_kappa": 0.7520386983881371,
+  "latents": 24,
+  "hidden": 48,
+  "models": [
+    "masked_raw",
+    "neural_uniform",
+    "neural_gate",
+    "neural_residual",
+    "neural_shuffled"
+  ],
+  "conditions": [
+    "M20_clean",
+    "M20_D50"
+  ],
+  "fit_test": "stratified 70/30, scaler and KMeans fit on TRAIN only",
+  "train_augmentation": "Gaussian noise SD=0.4 or feature dropout prob=0.3; per-row 0.5",
+  "unseen_test_corruption": "coordinate shuffling or additive random signs of amplitude 1.5",
+  "fixed_missingness": 0.2,
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0",
+    "torch": "2.10.0+cpu"
+  },
+  "preliminary_limitations": "not naturally multi-view; no official-code neural baselines; tests exploratory"
+}
