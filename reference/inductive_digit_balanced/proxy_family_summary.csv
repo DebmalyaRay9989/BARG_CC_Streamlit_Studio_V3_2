@@ -1,4 +1,0 @@
-family_id,family,observed_degraded_views,mae,spearman,available_views_0,available_views_1,available_views_2
-0,rotation,4336,0.208639268,0.506344274,1404,1457,1475
-1,crop,4368,0.270416606,0.203960475,1412,1478,1478
-2,bleed,4504,0.125724072,0.055961314,1512,1489,1503
