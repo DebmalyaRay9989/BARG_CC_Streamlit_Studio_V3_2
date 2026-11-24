@@ -1,0 +1,7 @@
+{
+  "source": "results/mask_switch_audit/pointwise.csv",
+  "sha256": "1cd947a5f08f75f3663fdab1a1a26f3a54612ade538d32d717ebc34727a7716f",
+  "n_rows": 10782,
+  "note": "Archived pointwise data reanalysis only; folds are not independent source populations.",
+  "status": "DESCRIPTIVE_NOT_CONFIRMATORY"
+}
