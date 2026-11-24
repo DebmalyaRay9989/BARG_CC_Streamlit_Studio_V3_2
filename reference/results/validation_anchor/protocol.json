@@ -1,0 +1,54 @@
+{
+  "conditions": [
+    "M20_clean",
+    "M20_D50"
+  ],
+  "datasets": [
+    "digits",
+    "wine",
+    "breast_cancer"
+  ],
+  "grid": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "heldout_corruption": "feature-coordinate permutation and random signed offsets not used for quality training",
+  "methods": [
+    "masked",
+    "neural",
+    "anchor_fixed_025",
+    "anchor_val_silhouette",
+    "anchor_uniform_025",
+    "anchor_score_shuffled"
+  ],
+  "model_does_not_use_validation_labels": true,
+  "neural_training": "45 epochs; 24-dim per-view latent, shared training configurations as original reference",
+  "published_code_competitor_status": "UNEXECUTED: no official external code or natural-view datasets in uploaded archive",
+  "raw_all_sha256": "21d407d08f974ea67b35f98664180c2bc8699ffa563a95ebd956bbf82c282618",
+  "seeds": [
+    47,
+    59,
+    71,
+    83,
+    97
+  ],
+  "selected_eta_applied_to": "both M20 clean and M20 D50; no test-label selection",
+  "selection": "label-free validation silhouette, M20+D50, KMeans centroids fitted on train; nonzero eta requires >=0.02 improvement over eta=0",
+  "selection_margin": 0.02,
+  "selection_outcome": "eta=0 in all 15 dataset-seed trials",
+  "software": {
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "sklearn": "1.8.0",
+    "torch": "2.10.0+cpu"
+  },
+  "source_type": "sklearn built-in, derived feature views; NOT naturally acquired multi-view",
+  "split": "60% train 20% validation 20% test, stratified, nonoverlapping within each seed",
+  "status": "Exploratory new splits after earlier test results; not preregistered/independent confirmation",
+  "stratified_splits_use_labels": true,
+  "verified_rows": 180,
+  "version": "bargcc-val-anchor-v1-2026-11-09"
+}

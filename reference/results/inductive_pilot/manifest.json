@@ -1,0 +1,70 @@
+{
+  "scope": "exploratory fixed-feature out-of-fold INDUCTIVE clustering; not trained neural HAMV-CC",
+  "folds": 5,
+  "cluster_seeds": 3,
+  "n_records": 1797,
+  "X_Y_sha256": "5889d26819cf830d070975af3c711419825fa0a078137b3d80b8e7d06bd58da0",
+  "test_hash_by_fold": {
+    "0": "b766be1bf0e30680c4377702a78a4bddac0e1a69b34f7b3ad07a01992d9dfa07"
+  },
+  "complete_test_partition": false,
+  "split_design": "5 mutually disjoint stratified test folds; train folds overlap",
+  "fit_protocol": "Encoder/scaler/PCA, reliability predictor and k-means fit on TRAIN only; k-means.predict TEST",
+  "test_corruptions": "rotation, crop, bleed not used to fit estimators or k-means",
+  "training_corruptions": "Gaussian, salt-and-pepper, blur, illumination to fit reliability",
+  "kappa": 0.7520386983881371,
+  "conditions": [
+    [
+      "M20_clean",
+      0.2,
+      0.0
+    ],
+    [
+      "M20_D50",
+      0.2,
+      0.5
+    ],
+    [
+      "M40_D50",
+      0.4,
+      0.5
+    ],
+    [
+      "M60_D50",
+      0.6,
+      0.5
+    ],
+    [
+      "M20_D100",
+      0.2,
+      1.0
+    ],
+    [
+      "M40_D100",
+      0.4,
+      1.0
+    ]
+  ],
+  "methods": [
+    "masked",
+    "gated",
+    "masked_unit",
+    "gated_unit",
+    "shuffled_unit",
+    "inverted_unit",
+    "prior_unit",
+    "oracle_unit"
+  ],
+  "posthoc": "yes, new exploratory experiment, not prospective preregistration",
+  "label_usage": "stratified fold construction and held-out ARI/NMI ONLY",
+  "limitations": [
+    "all three pseudo-views derived from same digits image",
+    "neural encoders, contrastive loss and residual branch not trained",
+    "training clusters fitted to clean yet masked source, test corruptions OOD",
+    "test folds mutually disjoint but training folds overlap"
+  ],
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "scikit_learn": "1.8.0",
+  "runtime_sec": 3.7812234860000444
+}

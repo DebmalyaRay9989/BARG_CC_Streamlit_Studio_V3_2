@@ -1,0 +1,17 @@
+{
+  "metrics": {
+    "digits_degraded_gate_mean": 0.44541274609881343
+  },
+  "protocol": "fixed 50 epochs, train-only MLP reconstruction, 10 shared stratified 60/20/20 splits with 5 later exploratory seeds, 2 conditions",
+  "status": "EXPLORATORY: 3 sources have pseudo-views, no current official-code comparisons; labels used for stratification and held-out ARI only",
+  "selection_rule": "Validation pseudo-partition clean-to-corrupt ARI +0.02 and corrupted silhouette >=mask-0.02; no semantic guarantee",
+  "pca16_control": "train-only PCA16 for Digits 10 matched seeds",
+  "benchmark_files": [
+    "raw.csv",
+    "summary.csv",
+    "paired_stats.csv",
+    "matched_pca16_digits.csv",
+    "fallback_raw.csv",
+    "fallback_summary.csv"
+  ]
+}

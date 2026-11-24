@@ -1,0 +1,65 @@
+{
+  "scope": "EXPLORATORY only, NEW repeated-split pseudo-view digits benchmarks; not HAMV-CC neural training",
+  "data_sha256": "5889d26819cf830d070975af3c711419825fa0a078137b3d80b8e7d06bd58da0",
+  "n_images": 1797,
+  "test_ids_sha256": {
+    "0": "5881c2e71c02fc11a56c5044262f7d2e9e99362099ee9de2cd5b6b7f1bbd1257",
+    "1": "24952c56b087c4c77ad3f10175f1c0ad2a75327aa41a1b6773fad83f0030e730",
+    "2": "2306da56df801696f001cb4d519f408fac7bb2da5cf436529f5ed1763a9f892c",
+    "3": "5958129c11abe4f8f8128d7e8526afb843edce657845932dc384c83c29803352",
+    "4": "a725347333b04212292b2ea4949545b9a22d96149460bec6ccf69bc2dfa7d978"
+  },
+  "splits": 5,
+  "clustering_seeds": 4,
+  "mask_probability": [
+    ".2",
+    ".4"
+  ],
+  "all_missing_policy": "rejection sampling before evaluation",
+  "fixed_gate_kappa": 0.7520386983881371,
+  "share_floor_rho": 0.1,
+  "train_corruptions": [
+    "gaussian",
+    "saltpepper",
+    "blur",
+    "illumination"
+  ],
+  "heldout_corruptions": [
+    "rotation",
+    "crop",
+    "bleed"
+  ],
+  "PCA": "full SVD, 12/view, training-only",
+  "methods": [
+    "gated_fixed_prior",
+    "gated_inverted",
+    "gated_oracle",
+    "gated_predicted",
+    "gated_random",
+    "gated_shuffled",
+    "gated_unitnorm",
+    "masked_concat",
+    "masked_unitnorm",
+    "spectral_gated",
+    "spectral_masked",
+    "ward_gated",
+    "ward_masked"
+  ],
+  "n_rows": 690,
+  "labels_access": [
+    "stratification",
+    "postfit external ARI/NMI"
+  ],
+  "independence": "5 partially overlapping test samples of ONE image dataset; no independent inference; all novelty exploratory",
+  "runtime_seconds": 12.497904374999962,
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "sklearn": "1.8.0",
+  "limitations": [
+    "pseudo-views from one source",
+    "not trained neural architecture",
+    "spectral affinity/k fixed before run, not optimized",
+    "kmeans is fitted transductively to test input features, label blind",
+    "different clustering algorithms not matched for capacity or compute"
+  ]
+}

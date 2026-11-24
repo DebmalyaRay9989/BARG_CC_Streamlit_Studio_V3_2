@@ -1,0 +1,39 @@
+{
+  "source": "Built-in sklearn Digits/Wine/Breast Cancer with derived or partitioned pseudo-views; no natural independent modalities",
+  "methods": [
+    "mask_raw",
+    "gate_raw",
+    "mask_denoised",
+    "gate_denoised",
+    "gate_denoised_prior",
+    "gate_denoised_shuffled",
+    "gate_denoised_oracle",
+    "pca16_raw"
+  ],
+  "seeds": [
+    121,
+    131,
+    137,
+    149,
+    163
+  ],
+  "conditions": [
+    [
+      "M20_clean",
+      0.0
+    ],
+    [
+      "M20_D50",
+      0.5
+    ]
+  ],
+  "fit": "all feature preprocessing, denoisers, score predictors, PCA and kmeans centroids on train only",
+  "contrast": "each score intervention applied to BOTH train and held-out test; shuffled only among available rows",
+  "oracle": "feature-preservation oracle uses uncorrupted held-out TEST features; diagnostic and NONDEPLOYABLE",
+  "no_label_use": "labels used for stratified split design and held-out ARI/NMI reporting, not fitting",
+  "status": "exploratory post-hoc after prior Digits/Wine/Breast Cancer results",
+  "limitations": "overlapping split records and no new naturally multi-view datasets; not independent confirmation",
+  "data_split": "60/20/20 within each seed",
+  "python": "3.13.5",
+  "numpy": "2.3.5"
+}

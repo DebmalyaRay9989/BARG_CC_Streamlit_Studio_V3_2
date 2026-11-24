@@ -1,0 +1,9 @@
+scenario,dropout_probability,n,certified,unchanged,dropped
+overlapping,0.0,20,20,20,0
+overlapping,0.1,20,9,16,12
+overlapping,0.25,20,1,10,42
+overlapping,0.5,20,0,9,81
+separated,0.0,20,20,20,0
+separated,0.1,20,19,20,12
+separated,0.25,20,6,20,42
+separated,0.5,20,1,20,81

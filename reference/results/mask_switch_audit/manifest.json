@@ -1,0 +1,22 @@
+{
+  "status": "POST_HOC_EXPLORATORY_MASK_SWITCH_MECHANISM",
+  "source": "scikit-learn Digits; three derived views of same image; no natural modalities",
+  "method": "train-only PCA and standardization; held-out transductive KMeans mechanism audit",
+  "score": "deterministic geometric pseudo-score; not a calibrated reliability estimator",
+  "assumption": "unit Euclidean norm of each view; removed weights renormalize with fixed logits",
+  "interpretations": [
+    "exact per-record bound for dropout",
+    "centroid-refit one-step Lloyd self-consistency; not global optimum or convergence",
+    "global exact partition proof checked only n=8, K=2"
+  ],
+  "code_sha256": "d0601105cc12551575e24b2f2f2000321df926b251544f3752a6c0bce931b112",
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "n_digits_rows": 30,
+  "n_small_global_trials": 160,
+  "false_certificates": 0,
+  "n_source_datasets": 3,
+  "no_specialist_official_baselines": true,
+  "observational_note": "ANES and modechoice are reused observational feature groups, not newly acquired independent modalities; split seeds overlap respondents",
+  "idealized_floor_tradeoff": "score [0,1,1] assigned deliberately: not an observed reliability estimate; stronger kappa reduces nominal participation floor"
+}
